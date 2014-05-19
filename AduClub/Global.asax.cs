@@ -18,6 +18,7 @@ namespace AduClub
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
+            System.Data.Entity.Database.SetInitializer(new AduClub.Models.CategoryContextInitializer());
         }
     }
 }
