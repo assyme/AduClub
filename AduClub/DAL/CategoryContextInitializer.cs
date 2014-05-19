@@ -7,7 +7,7 @@ using AduClub.DAL;
 
 namespace AduClub.Models
 {
-    public class CategoryContextInitializer : DropCreateDatabaseAlways<ClubCentralDBContext>
+    public class ClubCentralContextInitializer : DropCreateDatabaseAlways<ClubCentralDBContext>
     {
         protected override void Seed(ClubCentralDBContext context)
         {
@@ -18,7 +18,7 @@ namespace AduClub.Models
             };
 
             categories.ForEach(c => context.Categories.Add(c));
-            context.Clubs.Add(new Club() { Name = "NodsJs", Description = "Club for Node JS Freaks." });
+            //context.Clubs.Add(new Club() { Name = "NodsJs", Description = "Club for Node JS Freaks." });
 
             context.SaveChanges();
         }
