@@ -175,12 +175,13 @@
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\ClubsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="DAL\ClubCentralDBContexnt.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Category.cs" />
-    <Compile Include="Models\CategoryContextInitializer.cs" />
+    <Compile Include="DAL\CategoryContextInitializer.cs" />
     <Compile Include="Models\Club.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

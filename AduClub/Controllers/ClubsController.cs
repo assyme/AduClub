@@ -7,12 +7,13 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using AduClub.Models;
+using AduClub.DAL;
 
 namespace AduClub.Controllers
 {
     public class ClubsController : Controller
     {
-        private ClubDBContext db = new ClubDBContext();
+        private ClubCentralDBContext db = new ClubCentralDBContext();
 
         // GET: /Clubs/
         public ActionResult Index()
