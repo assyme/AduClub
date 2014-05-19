@@ -14,6 +14,11 @@ namespace AduClub.Models
 
     public class CategoryDBContext : DbContext
     {
+        public CategoryDBContext()
+            : base("DefaultConnection")
+        {
+
+        }
         public DbSet<Category> Categories { get; set; }
     }
 }
