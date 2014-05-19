@@ -8,7 +8,7 @@ using System.Web;
 using System.Web.Mvc;
 using AduClub.Models;
 
-namespace AduClub.Controllers.Admin
+namespace AduClub.Controllers
 {
     public class CategoryController : Controller
     {
