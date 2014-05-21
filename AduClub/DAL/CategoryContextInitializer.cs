@@ -27,6 +27,9 @@ namespace AduClub.DAL
             
             context.Clubs.Add(clubNode);
 
+            var clubPhoto = new Club() { Name = "Photography Club", Description = "Club for camera people", CreatedOn = DateTime.Now.AddDays(-1) };
+            clubPhoto.Categories = context.Categories.Take(1).ToList();
+            context.Clubs.Add(clubPhoto);
             context.SaveChanges();
         }
     }

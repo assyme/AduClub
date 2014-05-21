@@ -185,6 +185,7 @@
     <Compile Include="Models\Club.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\ClubRepository.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -245,6 +246,7 @@
     <Content Include="Views\Clubs\Details.cshtml" />
     <Content Include="Views\Clubs\Edit.cshtml" />
     <Content Include="Views\Clubs\Index.cshtml" />
+    <Content Include="Views\Home\UserClubs.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

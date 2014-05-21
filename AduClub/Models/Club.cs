@@ -14,5 +14,6 @@ namespace AduClub.Models
         public DateTime CreatedOn { get; set; }
         
         public virtual ICollection<Category> Categories { get; set; }
+        //public virtual ICollection<ApplicationUser> Users { get; set; }
     } 
 }

@@ -25,6 +25,14 @@ namespace AduClub.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
+        
+        }
+
+        public ActionResult UserClubs()
+        {
+            ViewBag.Messagge = "Your Clubs";
+
+            return View();
         }
     }
 }
