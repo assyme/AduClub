@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Holder.js</id>
+    <version>2.3.2</version>
+    <authors>Ivan Malopinsky</authors>
+    <owners>Ivan Malopinsky</owners>
+    <licenseUrl>http://opensource.org/licenses/MIT</licenseUrl>
+    <projectUrl>http://imsky.github.com/holder/</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Holder uses the canvas element and the data URI scheme to render image placeholders entirely in browser.</description>
+    <releaseNotes>Fix chrome bug where web fonts are blank with empty stylesheet</releaseNotes>
+    <tags>Images Placeholders Client-Side Canvas Generation Development</tags>
+  </metadata>
+</package>
