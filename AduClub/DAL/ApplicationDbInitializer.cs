@@ -55,6 +55,11 @@ namespace AduClub.DAL
                 var roleResult = roleManager.Create(new IdentityRole(name));
             }
 
+            if (!roleManager.RoleExists("user"))
+            {
+                var roleResult = roleManager.Create(new IdentityRole("user"));
+            }
+
             var adminUser = new ApplicationUser();
             adminUser.UserName = name;
             var adminResult = userManager.Create(adminUser, password);
