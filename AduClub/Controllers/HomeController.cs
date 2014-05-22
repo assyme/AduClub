@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AduClub.Repositories;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -31,8 +32,9 @@ namespace AduClub.Controllers
         public ActionResult UserClubs()
         {
             ViewBag.Messagge = "Your Clubs";
-
-            return View();
+            var clubRepo = new ClubRepository();
+            var clubs = clubRepo.GetAllClubs();
+            return View(clubs);
         }
     }
 }

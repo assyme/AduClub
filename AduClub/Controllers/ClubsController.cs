@@ -13,7 +13,7 @@ namespace AduClub.Controllers
 {
     public class ClubsController : Controller
     {
-        private ClubCentralDBContext db = new ClubCentralDBContext();
+        private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: /Clubs/
         public ActionResult Index()

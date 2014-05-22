@@ -8,11 +8,11 @@ namespace AduClub.Repositories
 {
     public class ClubRepository
     {
-        private DAL.ClubCentralDBContext _dbContext;
+        private AduClub.Models.ApplicationDbContext _dbContext;
 
         public ClubRepository()
         {
-            _dbContext = new AduClub.DAL.ClubCentralDBContext();
+            _dbContext = new AduClub.Models.ApplicationDbContext();
         }
 
         public IEnumerable<Club> GetAllClubs()

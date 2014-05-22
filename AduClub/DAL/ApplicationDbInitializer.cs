@@ -5,13 +5,19 @@ using System.Web;
 using System.Data.Entity;
 using AduClub.DAL;
 using AduClub.Models;
+using Microsoft.AspNet.Identity;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace AduClub.DAL
 {
-    public class ClubCentralContextInitializer : DropCreateDatabaseAlways<ClubCentralDBContext>
+    public class ApplicationContextInitializer : DropCreateDatabaseIfModelChanges<ApplicationDbContext>
     {
-        protected override void Seed(ClubCentralDBContext context)
+
+        protected override void Seed(ApplicationDbContext context)
         {
+
+            InitIdentityTables(context);
+            
             var categories = new List<AduClub.Models.Category>(){
                 new AduClub.Models.Category() {Name = "Science"},
                 new AduClub.Models.Category() {Name = "Art"},
@@ -31,6 +37,33 @@ namespace AduClub.DAL
             clubPhoto.Categories = context.Categories.Take(1).ToList();
             context.Clubs.Add(clubPhoto);
             context.SaveChanges();
+
+            base.Seed(context);
+        }
+
+        private void InitIdentityTables(ApplicationDbContext context)
+        {
+            var userManager = new UserManager<ApplicationUser>(new UserStore<ApplicationUser>(context));
+
+            var roleManager = new RoleManager<IdentityRole>(new RoleStore<IdentityRole>(context));
+
+            string name = "Admin";
+            string password = "adnan123";
+
+            if (!roleManager.RoleExists(name))
+            {
+                var roleResult = roleManager.Create(new IdentityRole(name));
+            }
+
+            var adminUser = new ApplicationUser();
+            adminUser.UserName = name;
+            var adminResult = userManager.Create(adminUser, password);
+
+            if (adminResult.Succeeded)
+            {
+                var result = userManager.AddToRole(adminUser.Id, name);
+            }
         }
     }
+
 }

@@ -11,6 +11,6 @@ namespace AduClub.Models
         public int ID { get; set; }
         public string Name { get; set; }
 
-        public virtual IEnumerable<Club> Clubs { get; set; }
+        public virtual ICollection<Club> Clubs { get; set; }
     }
 }

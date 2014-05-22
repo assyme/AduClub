@@ -10,6 +10,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 using Microsoft.Owin.Security;
 using AduClub.Models;
 
+
 namespace AduClub.Controllers
 {
     [Authorize]
