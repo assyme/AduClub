@@ -8,7 +8,7 @@ namespace AduClub.Repositories
 {
     public class ClubRepository
     {
-        private AduClub.Models.ApplicationDbContext _dbContext;
+        private ApplicationDbContext _dbContext;
 
         public ClubRepository()
         {
