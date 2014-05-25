@@ -5,6 +5,7 @@ using System.Web;
 using System.Data.Entity;
 using AduClub.DAL;
 using AduClub.Models;
+using Devtalk.EF.CodeFirst;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 

@@ -42,7 +42,7 @@ input[type="checkbox"].input-validation-error {
 }
 
 .getInvolved {
-    background-image : url("../Images/get-involved.png");
+    background-image : url("../Images/home.jpg");
     background-origin : border-box;
     background-repeat : no-repeat;
     color: white;
