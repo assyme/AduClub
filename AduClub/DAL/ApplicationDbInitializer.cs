@@ -29,7 +29,7 @@ namespace AduClub.DAL
             context.SaveChanges();
 
             var clubs = new List<Club>();
-            var clubNode = new Club() { Name = "NodesJs", Description = "Club for Node JS Freaks.", CreatedOn = DateTime.Now };
+            var clubNode = new Club() { Name = "Football", Description = "Club for Football fans.", CreatedOn = DateTime.Now };
             clubNode.Categories = context.Categories.ToList();
             
             context.Clubs.Add(clubNode);
