@@ -12,6 +12,7 @@ namespace AduClub.Models
         public string Name { get; set; }
         public string Description { get; set; }
         public DateTime CreatedOn { get; set; }
+        public string ImagePath { get; set; }
         
         public virtual ICollection<Category> Categories { get; set; }
         public virtual ICollection<ApplicationUser> Users { get; set; }

@@ -29,12 +29,12 @@ namespace AduClub.DAL
             context.SaveChanges();
 
             var clubs = new List<Club>();
-            var clubNode = new Club() { Name = "NodesJs", Description = "Club for Node JS Freaks.", CreatedOn = DateTime.Now };
+            var clubNode = new Club() { Name = "Football", Description = "Club for Football Freaks.", CreatedOn = DateTime.Now };
             clubNode.Categories = context.Categories.ToList();
-            
+            clubNode.ImagePath = "/Images/football.jpg";
             context.Clubs.Add(clubNode);
 
-            var clubPhoto = new Club() { Name = "Photography Club", Description = "Club for camera people", CreatedOn = DateTime.Now.AddDays(-1) };
+            var clubPhoto = new Club() { Name = "Photography Club", Description = "Club for camera people", CreatedOn = DateTime.Now.AddDays(-1), ImagePath = "/Images/camera.jpg" };
             clubPhoto.Categories = context.Categories.Take(1).ToList();
             context.Clubs.Add(clubPhoto);
             context.SaveChanges();
