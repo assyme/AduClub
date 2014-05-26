@@ -29,11 +29,8 @@ namespace AduClub.DAL
             context.SaveChanges();
 
             var clubs = new List<Club>();
-<<<<<<< HEAD
-            var clubNode = new Club() { Name = "Football", Description = "Club for Football Freaks.", CreatedOn = DateTime.Now };
-=======
-            var clubNode = new Club() { Name = "Football", Description = "Club for Football fans.", CreatedOn = DateTime.Now };
->>>>>>> c0e0bdce8aa1f85652c6d66481d00742cb711f19
+
+            var clubNode = new Club() { Name = "Football", Description = "Club for Football Fans.", CreatedOn = DateTime.Now };
             clubNode.Categories = context.Categories.ToList();
             clubNode.ImagePath = "/Images/football.jpg";
             context.Clubs.Add(clubNode);
