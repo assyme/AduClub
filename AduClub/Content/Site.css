@@ -46,4 +46,5 @@ input[type="checkbox"].input-validation-error {
     background-origin : border-box;
     background-repeat : no-repeat;
     color: white;
+    background-size: cover;
 }
